@@ -10,75 +10,107 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 body{
-    background:#f4f6f8;
+    background: linear-gradient(120deg,#fdfbfb,#ebedee);
     color:#333;
 }
 
+/* Header */
 header{
-    background:#0f172a;
+    background: linear-gradient(to right,#0f172a,#1e3a8a);
     color:white;
+    padding:60px 20px;
     text-align:center;
-    padding:40px 20px;
 }
 
+header h1{
+    font-size:42px;
+}
+
+header p{
+    font-size:20px;
+    margin-top:10px;
+}
+
+/* Navigation */
 nav{
-    background:#1e293b;
+    background:#020617;
+    padding:15px;
     text-align:center;
-    padding:12px;
+    position:sticky;
+    top:0;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+    margin:0 18px;
+    font-weight:600;
 }
 
+nav a:hover{
+    color:#38bdf8;
+}
+
+/* Sections */
 section{
     max-width:1000px;
     margin:auto;
-    padding:40px 20px;
+    padding:50px 20px;
 }
 
 h2{
-    color:#0f172a;
-    border-bottom:3px solid #ddd;
-    margin-bottom:15px;
+    color:#020617;
+    margin-bottom:20px;
+    border-left:6px solid #2563eb;
+    padding-left:12px;
 }
 
+/* Cards */
 .card{
     background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.1);
-    margin-top:15px;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.15);
 }
 
 ul{
     margin-left:20px;
-    line-height:1.8;
+    line-height:1.9;
 }
 
+/* Button */
 .btn{
     display:inline-block;
-    margin-top:15px;
-    padding:10px 20px;
-    background:#0f172a;
+    margin-top:20px;
+    padding:12px 28px;
+    background:#2563eb;
     color:white;
     text-decoration:none;
-    border-radius:6px;
+    border-radius:30px;
     font-weight:bold;
 }
 
+.btn:hover{
+    background:#1d4ed8;
+}
+
+/* Footer */
 footer{
-    background:#0f172a;
+    background:#020617;
     color:white;
     text-align:center;
-    padding:15px;
+    padding:18px;
+    margin-top:40px;
 }
 </style>
 </head>
@@ -86,25 +118,25 @@ footer{
 <body>
 
 <header>
-<h1>Keerthana Narapureddy</h1>
-<p>B.Tech CSE Graduate | Entry-Level Software Developer</p>
+    <h1>Keerthana Narapureddy</h1>
+    <p>B.Tech CSE | Aspiring Software Developer</p>
 </header>
 
 <nav>
-<a href="#summary">Summary</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#education">Education</a>
-<a href="#contact">Contact</a>
+    <a href="#objective">Objective</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<section id="summary">
-<h2>Professional Summary</h2>
+<section id="objective">
+<h2>Career Objective</h2>
 <div class="card">
 <p>
-Detail-oriented and motivated Computer Science graduate with strong foundations
-in programming, web technologies, and problem-solving. Seeking an entry-level
-role to apply technical skills and grow in a dynamic organization.
+Detail-oriented Computer Science graduate seeking an entry-level software role
+to apply programming, web development, and problem-solving skills while
+contributing to organizational growth.
 </p>
 </div>
 </section>
@@ -113,11 +145,11 @@ role to apply technical skills and grow in a dynamic organization.
 <h2>Technical Skills</h2>
 <div class="card">
 <ul>
-<li>Programming Languages: C, Java, Python</li>
-<li>Web Technologies: HTML, CSS, JavaScript</li>
-<li>Databases: SQL, MySQL</li>
-<li>Tools: VS Code, GitHub</li>
-<li>Core Concepts: Data Structures, OOP, DBMS, SDLC</li>
+<li><b>Programming:</b> C, Java, Python</li>
+<li><b>Web:</b> HTML, CSS, JavaScript</li>
+<li><b>Databases:</b> SQL, MySQL</li>
+<li><b>Tools:</b> GitHub, VS Code</li>
+<li><b>Core:</b> Data Structures, DBMS, OOP</li>
 </ul>
 </div>
 </section>
@@ -127,9 +159,17 @@ role to apply technical skills and grow in a dynamic organization.
 <div class="card">
 <p><b>Community Service Project – Crop Rotation</b></p>
 <ul>
-<li>Created awareness on sustainable crop rotation techniques</li>
-<li>Analyzed soil data and suggested suitable crop cycles</li>
-<li>Conducted training sessions and poster presentations</li>
+<li>Educated farmers on crop rotation benefits</li>
+<li>Improved soil fertility & sustainable farming</li>
+<li>Conducted awareness programs and training</li>
+</ul>
+
+<br>
+
+<p><b>Personal Portfolio Website</b></p>
+<ul>
+<li>Designed responsive portfolio using HTML & CSS</li>
+<li>Hosted using GitHub Pages</li>
 </ul>
 </div>
 </section>
@@ -137,14 +177,8 @@ role to apply technical skills and grow in a dynamic organization.
 <section id="education">
 <h2>Education</h2>
 <div class="card">
-<p><b>B.Tech – Computer Science Engineering (2023)</b></p>
-<p>Eluru College of Engineering and Technology</p>
-
-<p><b>Intermediate (MPC) – 2021</b></p>
-<p>NRI Junior College</p>
-
-<p><b>SSC – 2020</b></p>
-<p>ZPH Madepalli High School</p>
+<p><b>B.Tech – Computer Science Engineering</b></p>
+<p>Eluru College of Engineering and Technology (2023)</p>
 </div>
 </section>
 
@@ -153,15 +187,13 @@ role to apply technical skills and grow in a dynamic organization.
 <div class="card">
 <p><b>Email:</b> keerthana.narapureddy24@gmail.com</p>
 <p><b>Phone:</b> +91 9542649738</p>
-<p><b>Location:</b> Eluru</p>
-
 <p><b>LinkedIn:</b>
 <a href="https://www.linkedin.com/in/keerthana-narapureddy-59233a307" target="_blank">
 View Profile
 </a>
 </p>
 
-<a href="resume.pdf" class="btn" download>Download Resume</a>
+<a href="Keerthana_1_Resume.docx" download class="btn">Download Resume</a>
 </div>
 </section>
 
