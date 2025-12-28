@@ -70,7 +70,9 @@ body {
 
 .about-img img {
   width: 220px;
-  border-radius: 50px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* INFO */
@@ -112,4 +114,5 @@ body {
     width: 180px;
   }
 }
+
 
