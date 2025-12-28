@@ -7,7 +7,7 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  background: radial-gradient(circle at top, #1b1f3b, #0a0a23);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,40 +22,63 @@ body {
 /* ABOUT CARD */
 .about-card {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(14px);
   border-radius: 25px;
   padding: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 30px;
   margin-bottom: 30px;
+  transition: transform 0.4s;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
 }
 
 .about-text h2 {
   background: linear-gradient(90deg, #a18cd1, #fbc2eb);
   display: inline-block;
-  padding: 8px 25px;
-  border-radius: 20px;
+  padding: 10px 28px;
+  border-radius: 25px;
   margin-bottom: 20px;
 }
 
 .about-text p {
   font-size: 14px;
-  line-height: 1.7;
-  max-width: 500px;
+  line-height: 1.8;
+  max-width: 520px;
 }
 
 .about-text h3 {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 
 .contact p {
   font-size: 13px;
-  margin-top: 5px;
+  margin-top: 6px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #fbc2eb, #a18cd1);
+  color: #000;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
 }
 
 .about-img img {
   width: 220px;
-  border-radius: 20px;
+  border-radius: 22px;
 }
 
 /* INFO CARD */
@@ -68,8 +91,16 @@ body {
   gap: 20px;
 }
 
+.info-box {
+  transition: transform 0.3s;
+}
+
+.info-box:hover {
+  transform: translateY(-6px);
+}
+
 .info-box h4 {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-weight: 600;
 }
 
@@ -77,3 +108,39 @@ body {
   font-size: 13px;
   line-height: 1.6;
 }
+
+/* ANIMATIONS */
+.fade-in {
+  animation: fadeIn 1.2s ease;
+}
+
+.fade-up {
+  animation: fadeUp 1.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text p {
+    max-width: 100%;
+  }
+
+  .about-img img {
+    width: 180px;
+  }
+}
+
