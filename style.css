@@ -70,7 +70,7 @@ body {
 
 .about-img img {
   width: 220px;
-  border-radius: 22px;
+  border-radius: 50px;
 }
 
 /* INFO */
@@ -112,3 +112,4 @@ body {
     width: 180px;
   }
 }
+
